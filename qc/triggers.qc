@@ -529,7 +529,7 @@ void() trigger_onlyregistered_touch =
 		return;
 
 	self.attack_finished = time + 2;
-	if (cvar("registered"))
+	if (cvar("registered") && !cvar("scratch4"))
 	{
 		self.message = string_null;
 		SUB_UseTargets ();
